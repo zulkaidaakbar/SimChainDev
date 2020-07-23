@@ -1,0 +1,19 @@
+hello, grid.
+HOST = spinquestgpvm01.fnal.gov
+/e906/app/users/zakbar/July2020/e1039-analysis/SimChainDev/scratch/july6_1K/4
+total 480K
+-rw-r--r-- 1 zakbar e-1039  12K Jul  2 01:40 Fun4Sim.C
+-rw-r--r-- 1 zakbar e-1039  16K Jul  3 13:52 ana_track.C
+-rw-r--r-- 1 zakbar e-1039  18K Jul  3 13:47 ana_tracklet.C
+-rw-r--r-- 1 zakbar e-1039  12K Jul  6 10:42 ana_tracklet_full.C
+-rw-r--r-- 1 zakbar e-1039  449 Jul  1 12:46 disp_geom.C
+-rwxr-xr-x 1 zakbar e-1039 1.4K Jul  3 10:58 gridrun.sh
+drwxr-xr-x 2 zakbar e-1039 2.0K Jul  6 11:09 input
+drwxr-xr-t 2 zakbar e-1039 2.0K Jul  6 11:09 log
+drwxr-xr-t 2 zakbar e-1039 2.0K Jul  6 11:09 out
+-rw-r--r-- 1 zakbar e-1039  123 Jul  6 11:09 out.txt
+-rw-r--r-- 1 zakbar e-1039  490 Jul  1 12:46 phpythia8_DY.cfg
+-rw-r--r-- 1 zakbar e-1039 1.1K Jul  1 12:46 phpythia8_Jpsi.cfg
+-rw-r--r-- 1 zakbar e-1039 4.2K Jul  1 12:46 run3_sim.opts
+-rw-r--r-- 1 zakbar e-1039 4.2K Jul  1 12:46 run6_sim.opts
+-rw-r--r-- 1 zakbar e-1039 4.2K Jul  1 12:46 run7_sim.opts

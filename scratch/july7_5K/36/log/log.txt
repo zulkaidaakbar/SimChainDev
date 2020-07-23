@@ -1,0 +1,742 @@
+CONDOR_DIR_INPUT is initiallized as ./input
+CONDOR_DIR_OUTPUT is initiallized as ./out
+hello, grid.
+HOST = spinquestgpvm01.fnal.gov
+/e906/app/users/zakbar/July2020/e1039-analysis/SimChainDev/scratch/july7_5K/36
+Fun4Sim.C
+ana_track.C
+ana_tracklet.C
+ana_tracklet_full.C
+disp_geom.C
+phpythia8_DY.cfg
+phpythia8_Jpsi.cfg
+run3_sim.opts
+run6_sim.opts
+run7_sim.opts
+total 480K
+-rw-r--r-- 1 zakbar e-1039  12K Jul  2 01:40 Fun4Sim.C
+-rw-r--r-- 1 zakbar e-1039  13K Jul  6 16:20 ana_track.C
+-rw-r--r-- 1 zakbar e-1039  18K Jul  3 13:47 ana_tracklet.C
+-rw-r--r-- 1 zakbar e-1039  13K Jul  6 16:58 ana_tracklet_full.C
+-rw-r--r-- 1 zakbar e-1039  449 Jul  1 12:46 disp_geom.C
+-rwxr-xr-x 1 zakbar e-1039 1.4K Jul  3 10:58 gridrun.sh
+drwxr-xr-x 2 zakbar e-1039 2.0K Jul  7 02:38 input
+drwxr-xr-t 2 zakbar e-1039 2.0K Jul  7 02:38 log
+drwxr-xr-t 2 zakbar e-1039 2.0K Jul  7 02:38 out
+-rw-r--r-- 1 zakbar e-1039  124 Jul  7 02:38 out.txt
+-rw-r--r-- 1 zakbar e-1039  490 Jul  1 12:46 phpythia8_DY.cfg
+-rw-r--r-- 1 zakbar e-1039 1.1K Jul  1 12:46 phpythia8_Jpsi.cfg
+-rw-r--r-- 1 zakbar e-1039 4.2K Jul  1 12:46 run3_sim.opts
+-rw-r--r-- 1 zakbar e-1039 4.2K Jul  1 12:46 run6_sim.opts
+-rw-r--r-- 1 zakbar e-1039 4.2K Jul  1 12:46 run7_sim.opts
+SETUP = /e906/app/software/osg/software/e1039/this-e1039.sh
+LD_LIBRARY_PATH=/e906/app/software/osg/users/zakbar/e1039/newgenfit/core-inst/lib:/e906/app/software/osg/software/e1039/share/lib:/e906/app/software/osg/software/e1039/share/lib64:/e906/app/software/osg/software/e1039/share-new/lib:/e906/app/software/osg/software/e1039/share/lib64:/e906/app/software/osg/software/e1039/share/root/lib:/e906/app/software/osg/software/e1039/share-new/lib:/e906/app/software/osg/software/e1039/share-new/lib:/e906/app/software/osg/software/e1039/share-new/lib:/e906/app/software/osg/software/e1039/share-new/lib
+   ------------------------------------------------------------
+  | Welcome to ROOT 6.16/00                  https://root.cern |
+  |                               (c) 1995-2018, The ROOT Team |
+  | Built for linuxx8664gcc on Jan 23 2019, 09:06:13           |
+  | From tags/v6-16-00@v6-16-00                                |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q' |
+   ------------------------------------------------------------
+
+
+Processing Fun4Sim.C(50)...
+
+char* Flags:
+
+Float Flags:
+
+Double Flags:
+FMAGSTR is 1.054
+KMAGSTR is 0.951
+
+Integer Flags:
+GeomSvc:  Load the plane geometry info via DbSvc for run = 1.
+Read channel map from user_e1039_geom_plane.param_G9_run5_2.
+GeomSvc: loaded hodoscope alignment parameters from /e906/app/software/osg/software/e1039/resource/alignment/run6/alignment_hodo.txt
+GeomSvc: loaded prop. tube alignment parameters from /e906/app/software/osg/software/e1039/resource/alignment/run6/alignment_prop.txt
+GeomSvc: loaded millepede-based alignment parameters from /e906/app/software/osg/software/e1039/resource/alignment/run6/align_mille.txt
+GeomSvc: loaded calibration parameters from /e906/app/software/osg/software/e1039/resource/alignment/run6/calibration.txt
+
+*************************************************************
+ Geant4 version Name: geant4-10-01-patch-03    (5-February-2016)
+                      Copyright : Geant4 Collaboration
+                      Reference : NIM A 506 (2003), 250-303
+                            WWW : http://cern.ch/geant4
+*************************************************************
+
+<<< Geant4 Physics List simulation engine: FTFP_BERT 2.0
+
+Fun4AllServer: Runnumber forced to 0 by RUNNUMBER IntFlag
+Fun4AllServer::setRun(): could not get timestamp for run  0, using tics(0) timestamp: Wed Dec 31 19:00:00 1969
+PHFieldConfig_v3::PHFieldConfig_v3:
+ from file1 [/e906/app/software/osg/software/e1039/resource/geometry/magnetic_fields/tab.Fmag]
+  and file2 [/e906/app/software/osg/software/e1039/resource/geometry/magnetic_fields/tab.Kmag]
+scale1: 1.054, scale2: 0.951, targetmag_y: 5
+PHFieldUtility::GetFieldConfigNode - field map with configuration from input default: PHFieldConfig_v3::identify - Field type of [Sea Quest: SeaQuest Field: 2 3D Cartesian]
+ from file1 [/e906/app/software/osg/software/e1039/resource/geometry/magnetic_fields/tab.Fmag]
+  and file2 [/e906/app/software/osg/software/e1039/resource/geometry/magnetic_fields/tab.Kmag]
+scale1: 1.054, scale2: 0.951, targetmag_y: 5
+scale1: 1.054, scale2: 0.951, targetmag_y: 5
+
+
+================ Begin Construct Mag Field =====================
+
+-----------------------------------------------------------
+      Magnetic field Module - Verbosity:
+-----------------------------------------------------------
+SQField3DCartesian: loading field map from ASCII file /e906/app/software/osg/software/e1039/resource/geometry/magnetic_fields/tab.Fmag
+  its demensions and ranges of the field: 1157123
+    X: 131 bins, -330.2 cm -- 330.2 cm, step size = 5.08 cm.
+    Y: 121 bins, -304.8 cm -- 304.8 cm, step size = 5.08 cm.
+    Z: 73 bins, -203.2 cm -- 711.2 cm, step size = 12.7 cm.
+
+================= End Construct Mag Field ======================
+
+
+================ Begin Construct Mag Field =====================
+
+-----------------------------------------------------------
+      Magnetic field Module - Verbosity:
+-----------------------------------------------------------
+SQField3DCartesian: loading field map from ASCII file /e906/app/software/osg/software/e1039/resource/geometry/magnetic_fields/tab.Kmag
+  its demensions and ranges of the field: 146853
+    X: 49 bins, -304.8 cm -- 304.8 cm, step size = 12.7 cm.
+    Y: 37 bins, -228.6 cm -- 228.6 cm, step size = 12.7 cm.
+    Z: 81 bins, -508 cm -- 508 cm, step size = 12.7 cm.
+
+================= End Construct Mag Field ======================
+
+PHFieldRegionalConst::identify: {0, 0, 0}	 {5}
+SQDipoleMagnet - begin construction of fmag from $E1039_RESOURCE/geometry/magnetic_fields/magnet_geom.db
+SQDipoleMagnet - begin construction of kmag from $E1039_RESOURCE/geometry/magnetic_fields/magnet_geom.db
+PHG4TargetCoilV2Detector::Construct:  Material:     Coil    density:  6.110 g/cm3   RadL:   2.021 cm   Nucl.Int.Length:  23.049 cm 
+                       Imean: 311.075 eV 
+
+   --->  Element: Nb (Nb)   Z = 41.0   N =  93.0   A =  92.91 g/mole
+         --->  Isotope:  Nb93   Z = 41   N =  93   A =  92.91 g/mole   abundance: 100.00 %
+          ElmMassFraction:  45.00 %  ElmAbundance  30.62 % 
+
+   --->  Element: Ti (Ti)   Z = 22.0   N =  47.9   A =  47.87 g/mole
+         --->  Isotope:  Ti46   Z = 22   N =  46   A =  45.95 g/mole   abundance:   8.25 %
+         --->  Isotope:  Ti47   Z = 22   N =  47   A =  46.95 g/mole   abundance:   7.44 %
+         --->  Isotope:  Ti48   Z = 22   N =  48   A =  47.95 g/mole   abundance:  73.72 %
+         --->  Isotope:  Ti49   Z = 22   N =  49   A =  48.95 g/mole   abundance:   5.41 %
+         --->  Isotope:  Ti50   Z = 22   N =  50   A =  49.94 g/mole   abundance:   5.18 %
+          ElmMassFraction:  45.00 %  ElmAbundance  59.43 % 
+
+   --->  Element: Cu (Cu)   Z = 29.0   N =  63.6   A =  63.55 g/mole
+         --->  Isotope:  Cu63   Z = 29   N =  63   A =  62.93 g/mole   abundance:  69.17 %
+         --->  Isotope:  Cu65   Z = 29   N =  65   A =  64.93 g/mole   abundance:  30.83 %
+          ElmMassFraction:  10.00 %  ElmAbundance   9.95 % 
+
+PHG4TargetCoilV2Detector::Construct:  Material:   SS316L    density:  7.950 g/cm3   RadL:   1.707 cm   Nucl.Int.Length:  16.915 cm 
+                       Imean: 288.933 eV 
+
+   --->  Element: Fe (Fe)   Z = 26.0   N =  55.9   A =  55.85 g/mole
+         --->  Isotope:  Fe54   Z = 26   N =  54   A =  53.94 g/mole   abundance:   5.84 %
+         --->  Isotope:  Fe56   Z = 26   N =  56   A =  55.93 g/mole   abundance:  91.75 %
+         --->  Isotope:  Fe57   Z = 26   N =  57   A =  56.94 g/mole   abundance:   2.12 %
+         --->  Isotope:  Fe58   Z = 26   N =  58   A =  57.93 g/mole   abundance:   0.28 %
+          ElmMassFraction:  60.00 %  ElmAbundance  60.81 % 
+
+   --->  Element: Cr (Cr)   Z = 24.0   N =  52.1   A =  52.00 g/mole
+         --->  Isotope:  Cr50   Z = 24   N =  50   A =  49.95 g/mole   abundance:   4.34 %
+         --->  Isotope:  Cr52   Z = 24   N =  52   A =  51.94 g/mole   abundance:  83.79 %
+         --->  Isotope:  Cr53   Z = 24   N =  53   A =  52.94 g/mole   abundance:   9.50 %
+         --->  Isotope:  Cr54   Z = 24   N =  54   A =  53.94 g/mole   abundance:   2.37 %
+          ElmMassFraction:  20.00 %  ElmAbundance  21.77 % 
+
+   --->  Element: Ni (Ni)   Z = 28.0   N =  58.8   A =  58.69 g/mole
+         --->  Isotope:  Ni58   Z = 28   N =  58   A =  57.94 g/mole   abundance:  68.08 %
+         --->  Isotope:  Ni60   Z = 28   N =  60   A =  59.93 g/mole   abundance:  26.22 %
+         --->  Isotope:  Ni61   Z = 28   N =  61   A =  60.93 g/mole   abundance:   1.14 %
+         --->  Isotope:  Ni62   Z = 28   N =  62   A =  61.93 g/mole   abundance:   3.63 %
+         --->  Isotope:  Ni64   Z = 28   N =  64   A =  63.93 g/mole   abundance:   0.93 %
+          ElmMassFraction:  15.00 %  ElmAbundance  14.47 % 
+
+   --->  Element: Mo (Mo)   Z = 42.0   N =  96.0   A =  95.93 g/mole
+         --->  Isotope:  Mo92   Z = 42   N =  92   A =  91.91 g/mole   abundance:  14.84 %
+         --->  Isotope:  Mo94   Z = 42   N =  94   A =  93.91 g/mole   abundance:   9.25 %
+         --->  Isotope:  Mo95   Z = 42   N =  95   A =  94.91 g/mole   abundance:  15.92 %
+         --->  Isotope:  Mo96   Z = 42   N =  96   A =  95.90 g/mole   abundance:  16.68 %
+         --->  Isotope:  Mo97   Z = 42   N =  97   A =  96.91 g/mole   abundance:   9.55 %
+         --->  Isotope:  Mo98   Z = 42   N =  98   A =  97.91 g/mole   abundance:  24.13 %
+         --->  Isotope: Mo100   Z = 42   N = 100   A =  99.91 g/mole   abundance:   9.63 %
+          ElmMassFraction:   5.00 %  ElmAbundance   2.95 % 
+
+Parameters for Coil_0
+int parameters: 
+absorberactive: 0
+absorbertruth: 0
+active: 0
+blackhole: 0
+lengthviarapidity: 1
+lightyield: 0
+num_z_planes: 6
+use_g4steps: 1
+double parameters: 
+length: 470.08
+place_x: 0
+place_y: 13.35
+place_z: -300
+radius: 100
+rot_x: 90
+rot_y: 0
+rot_z: 0
+steplimits: nan
+thickness: 100
+tmax: nan
+tmin: nan
+string parameters: 
+material: G4_Galactic
+
+   [ (           1             0             0)
+     (           0   6.12323e-17            -1)
+     (           0             1   6.12323e-17) ]
+G4Material WARNING: duplicate name of material G4_lHe
+G4Material WARNING: duplicate name of material Coil
+PHG4TargetCoilV2Detector::Construct:  Material:     Coil    density:  6.110 g/cm3   RadL:   2.021 cm   Nucl.Int.Length:  23.049 cm 
+                       Imean: 311.075 eV 
+
+   --->  Element: Nb (Nb)   Z = 41.0   N =  93.0   A =  92.91 g/mole
+         --->  Isotope:  Nb93   Z = 41   N =  93   A =  92.91 g/mole   abundance: 100.00 %
+          ElmMassFraction:  45.00 %  ElmAbundance  30.62 % 
+
+   --->  Element: Ti (Ti)   Z = 22.0   N =  47.9   A =  47.87 g/mole
+         --->  Isotope:  Ti46   Z = 22   N =  46   A =  45.95 g/mole   abundance:   8.25 %
+         --->  Isotope:  Ti47   Z = 22   N =  47   A =  46.95 g/mole   abundance:   7.44 %
+         --->  Isotope:  Ti48   Z = 22   N =  48   A =  47.95 g/mole   abundance:  73.72 %
+         --->  Isotope:  Ti49   Z = 22   N =  49   A =  48.95 g/mole   abundance:   5.41 %
+         --->  Isotope:  Ti50   Z = 22   N =  50   A =  49.94 g/mole   abundance:   5.18 %
+          ElmMassFraction:  45.00 %  ElmAbundance  59.43 % 
+
+   --->  Element: Cu (Cu)   Z = 29.0   N =  63.6   A =  63.55 g/mole
+         --->  Isotope:  Cu63   Z = 29   N =  63   A =  62.93 g/mole   abundance:  69.17 %
+         --->  Isotope:  Cu65   Z = 29   N =  65   A =  64.93 g/mole   abundance:  30.83 %
+          ElmMassFraction:  10.00 %  ElmAbundance   9.95 % 
+
+G4Material WARNING: duplicate name of material SS316L
+PHG4TargetCoilV2Detector::Construct:  Material:   SS316L    density:  7.950 g/cm3   RadL:   1.707 cm   Nucl.Int.Length:  16.915 cm 
+                       Imean: 288.933 eV 
+
+   --->  Element: Fe (Fe)   Z = 26.0   N =  55.9   A =  55.85 g/mole
+         --->  Isotope:  Fe54   Z = 26   N =  54   A =  53.94 g/mole   abundance:   5.84 %
+         --->  Isotope:  Fe56   Z = 26   N =  56   A =  55.93 g/mole   abundance:  91.75 %
+         --->  Isotope:  Fe57   Z = 26   N =  57   A =  56.94 g/mole   abundance:   2.12 %
+         --->  Isotope:  Fe58   Z = 26   N =  58   A =  57.93 g/mole   abundance:   0.28 %
+          ElmMassFraction:  60.00 %  ElmAbundance  60.81 % 
+
+   --->  Element: Cr (Cr)   Z = 24.0   N =  52.1   A =  52.00 g/mole
+         --->  Isotope:  Cr50   Z = 24   N =  50   A =  49.95 g/mole   abundance:   4.34 %
+         --->  Isotope:  Cr52   Z = 24   N =  52   A =  51.94 g/mole   abundance:  83.79 %
+         --->  Isotope:  Cr53   Z = 24   N =  53   A =  52.94 g/mole   abundance:   9.50 %
+         --->  Isotope:  Cr54   Z = 24   N =  54   A =  53.94 g/mole   abundance:   2.37 %
+          ElmMassFraction:  20.00 %  ElmAbundance  21.77 % 
+
+   --->  Element: Ni (Ni)   Z = 28.0   N =  58.8   A =  58.69 g/mole
+         --->  Isotope:  Ni58   Z = 28   N =  58   A =  57.94 g/mole   abundance:  68.08 %
+         --->  Isotope:  Ni60   Z = 28   N =  60   A =  59.93 g/mole   abundance:  26.22 %
+         --->  Isotope:  Ni61   Z = 28   N =  61   A =  60.93 g/mole   abundance:   1.14 %
+         --->  Isotope:  Ni62   Z = 28   N =  62   A =  61.93 g/mole   abundance:   3.63 %
+         --->  Isotope:  Ni64   Z = 28   N =  64   A =  63.93 g/mole   abundance:   0.93 %
+          ElmMassFraction:  15.00 %  ElmAbundance  14.47 % 
+
+   --->  Element: Mo (Mo)   Z = 42.0   N =  96.0   A =  95.93 g/mole
+         --->  Isotope:  Mo92   Z = 42   N =  92   A =  91.91 g/mole   abundance:  14.84 %
+         --->  Isotope:  Mo94   Z = 42   N =  94   A =  93.91 g/mole   abundance:   9.25 %
+         --->  Isotope:  Mo95   Z = 42   N =  95   A =  94.91 g/mole   abundance:  15.92 %
+         --->  Isotope:  Mo96   Z = 42   N =  96   A =  95.90 g/mole   abundance:  16.68 %
+         --->  Isotope:  Mo97   Z = 42   N =  97   A =  96.91 g/mole   abundance:   9.55 %
+         --->  Isotope:  Mo98   Z = 42   N =  98   A =  97.91 g/mole   abundance:  24.13 %
+         --->  Isotope: Mo100   Z = 42   N = 100   A =  99.91 g/mole   abundance:   9.63 %
+          ElmMassFraction:   5.00 %  ElmAbundance   2.95 % 
+
+Parameters for Coil_1
+int parameters: 
+absorberactive: 0
+absorbertruth: 0
+active: 0
+blackhole: 0
+lengthviarapidity: 1
+lightyield: 0
+num_z_planes: 6
+use_g4steps: 1
+double parameters: 
+length: 470.08
+place_x: 0
+place_y: -13.35
+place_z: -300
+radius: 100
+rot_x: -90
+rot_y: 0
+rot_z: 0
+steplimits: nan
+thickness: 100
+tmax: nan
+tmin: nan
+string parameters: 
+material: G4_Galactic
+
+   [ (           1             0             0)
+     (           0   6.12323e-17             1)
+     (           0            -1   6.12323e-17) ]
+G4Material WARNING: duplicate name of material G4_lHe
+DEBUG:  Material:   Target    density: 578.000 mg/cm3  RadL:  74.959 cm   Nucl.Int.Length:   1.142 m  
+                       Imean:  51.966 eV 
+
+   --->  Element: Nitrogen (N)   Z =  7.0   N =  14.0   A =  14.00 g/mole
+         --->  Isotope:   N14   Z =  7   N =  14   A =  14.00 g/mole   abundance:  99.63 %
+         --->  Isotope:   N15   Z =  7   N =  15   A =  15.00 g/mole   abundance:   0.37 %
+          ElmMassFraction:  73.99 %  ElmAbundance  22.36 % 
+
+   --->  Element: Hydrogen (H)   Z =  1.0   N =   1.0   A =   1.01 g/mole
+         --->  Isotope:    H1   Z =  1   N =   1   A =   1.01 g/mole   abundance:  99.99 %
+         --->  Isotope:    H2   Z =  1   N =   2   A =   2.01 g/mole   abundance:   0.01 %
+          ElmMassFraction:  16.01 %  ElmAbundance  67.07 % 
+
+   --->  Element: Helium (He)   Z =  2.0   N =   4.0   A =   4.00 g/mole
+         --->  Isotope:   He3   Z =  2   N =   3   A =   3.02 g/mole   abundance:   0.00 %
+         --->  Isotope:   He4   Z =  2   N =   4   A =   4.00 g/mole   abundance: 100.00 %
+          ElmMassFraction:  10.00 %  ElmAbundance  10.57 % 
+
+Parameters for Target_0
+int parameters: 
+absorberactive: 0
+absorbertruth: 0
+active: 0
+blackhole: 0
+lengthviarapidity: 0
+lightyield: 0
+use_g4steps: 1
+double parameters: 
+length: 7.9
+place_x: 0
+place_y: 0
+place_z: -300
+radius: 0
+rot_x: 0
+rot_y: 0
+rot_z: 0
+steplimits: nan
+thickness: 1
+tmax: nan
+tmin: nan
+string parameters: 
+material: Target
+
+   [ (           1             0             0)
+     (           0             1             0)
+     (           0             0             1) ]
+PHG4Reco::InitRun - export geometry to DST via tmp file /tmp/PHGeomUtility_geom_file_15223.gdml
+PHG4GDML: Writing '/tmp/PHGeomUtility_geom_file_15223.gdml'...
+PHG4GDML: Writing definitions...
+G4GDML: Writing materials...
+PHG4GDML: Writing solids...
+PHG4GDML: Writing structure...
+G4GDML: Writing setup...
+PHG4GDML: Writing surfaces...
+PHG4GDML: Writing '/tmp/PHGeomUtility_geom_file_15223.gdml' done !
+PHTFileServer::open - opening file eval.root (RECREATE)
+PHFieldConfig_v3::PHFieldConfig_v3:
+ from file1 [/e906/app/software/osg/software/e1039/resource/geometry/magnetic_fields/tab.Fmag]
+  and file2 [/e906/app/software/osg/software/e1039/resource/geometry/magnetic_fields/tab.Kmag]
+scale1: 1.054, scale2: 0.951, targetmag_y: 5
+PHTFileServer::open - opening file trk_eval.root (RECREATE)
+ERROR: /e906/app/software/osg/users/zakbar/e1039/newgenfit/e1039-core/module_example/TrkEval.cxx: 1325: !_run_header
+ERROR: /e906/app/software/osg/users/zakbar/e1039/newgenfit/e1039-core/module_example/TrkEval.cxx: 1331: !_spill_map
+--------------------------------------
+
+List of Nodes in Fun4AllServer:
+Node Tree under TopNode TOP
+TOP (PHCompositeNode)/
+   DST (PHCompositeNode)/
+      PHG4INEVENT (PHDataNode)
+      G4HIT_D0U (IO,PHG4HitContainer)
+      G4HIT_D0X (IO,PHG4HitContainer)
+      G4HIT_D0V (IO,PHG4HitContainer)
+      G4HIT_D2V (IO,PHG4HitContainer)
+      G4HIT_D2Xp (IO,PHG4HitContainer)
+      G4HIT_D2U (IO,PHG4HitContainer)
+      G4HIT_D3pVp (IO,PHG4HitContainer)
+      G4HIT_D3pXp (IO,PHG4HitContainer)
+      G4HIT_D3pUp (IO,PHG4HitContainer)
+      G4HIT_D3mVp (IO,PHG4HitContainer)
+      G4HIT_D3mXp (IO,PHG4HitContainer)
+      G4HIT_D3mUp (IO,PHG4HitContainer)
+      G4HIT_H1B (IO,PHG4HitContainer)
+      G4HIT_H1T (IO,PHG4HitContainer)
+      G4HIT_H1L (IO,PHG4HitContainer)
+      G4HIT_H1R (IO,PHG4HitContainer)
+      G4HIT_H2L (IO,PHG4HitContainer)
+      G4HIT_H2R (IO,PHG4HitContainer)
+      G4HIT_H2B (IO,PHG4HitContainer)
+      G4HIT_H2T (IO,PHG4HitContainer)
+      G4HIT_H3B (IO,PHG4HitContainer)
+      G4HIT_H3T (IO,PHG4HitContainer)
+      G4HIT_H4Y1L (IO,PHG4HitContainer)
+      G4HIT_H4Y1R (IO,PHG4HitContainer)
+      G4HIT_H4Y2L (IO,PHG4HitContainer)
+      G4HIT_H4Y2R (IO,PHG4HitContainer)
+      G4HIT_H4B (IO,PHG4HitContainer)
+      G4HIT_H4T (IO,PHG4HitContainer)
+      G4HIT_P1Y1 (IO,PHG4HitContainer)
+      G4HIT_P1Y2 (IO,PHG4HitContainer)
+      G4HIT_P1X1 (IO,PHG4HitContainer)
+      G4HIT_P1X2 (IO,PHG4HitContainer)
+      G4HIT_P2X1 (IO,PHG4HitContainer)
+      G4HIT_P2X2 (IO,PHG4HitContainer)
+      G4HIT_P2Y1 (IO,PHG4HitContainer)
+      G4HIT_P2Y2 (IO,PHG4HitContainer)
+      G4HIT_DP1TL (IO,PHG4HitContainer)
+      G4HIT_DP1TR (IO,PHG4HitContainer)
+      G4HIT_DP1BL (IO,PHG4HitContainer)
+      G4HIT_DP1BR (IO,PHG4HitContainer)
+      G4HIT_DP2TL (IO,PHG4HitContainer)
+      G4HIT_DP2TR (IO,PHG4HitContainer)
+      G4HIT_DP2BL (IO,PHG4HitContainer)
+      G4HIT_DP2BR (IO,PHG4HitContainer)
+      G4TruthInfo (IO,PHG4TruthInfoContainer)
+      SQHitVector (IO,SQHitVector_v1)
+      SQEvent (IO,SQEvent_v1)
+      SRecEvent (IO,SRecEvent)
+      TrackletVector (IO,TrackletVector)
+   RUN (PHCompositeNode)/
+      FIELD_CONFIG (IO,PHFieldConfig_v3)
+      G4GEOPARAM_Shielding1_0 (IO,PdbParameterMapContainer)
+      G4GEOPARAM_Shielding2_0 (IO,PdbParameterMapContainer)
+      G4GEOPARAM_Shielding3_0 (IO,PdbParameterMapContainer)
+      G4GEOPARAM_fmag_0 (IO,PdbParameterMapContainer)
+      G4GEOPARAM_kmag_0 (IO,PdbParameterMapContainer)
+      MUID_absorber (PHCompositeNode)/
+         G4GEOPARAM_MUID_absorber (IO,PdbParameterMapContainer)
+      Collimator (PHCompositeNode)/
+         G4GEOPARAM_Collimator (IO,PdbParameterMapContainer)
+      Coil (PHCompositeNode)/
+         G4GEOPARAM_Coil (IO,PdbParameterMapContainer)
+      Target (PHCompositeNode)/
+         G4GEOPARAM_Target (IO,PdbParameterMapContainer)
+      D0U (PHCompositeNode)/
+         G4GEOPARAM_D0U (IO,PdbParameterMapContainer)
+      BLOCKGEOM_D0U (IO,PHG4BlockGeomContainer)
+      D0X (PHCompositeNode)/
+         G4GEOPARAM_D0X (IO,PdbParameterMapContainer)
+      BLOCKGEOM_D0X (IO,PHG4BlockGeomContainer)
+      D0V (PHCompositeNode)/
+         G4GEOPARAM_D0V (IO,PdbParameterMapContainer)
+      BLOCKGEOM_D0V (IO,PHG4BlockGeomContainer)
+      D2V (PHCompositeNode)/
+         G4GEOPARAM_D2V (IO,PdbParameterMapContainer)
+      BLOCKGEOM_D2V (IO,PHG4BlockGeomContainer)
+      D2Xp (PHCompositeNode)/
+         G4GEOPARAM_D2Xp (IO,PdbParameterMapContainer)
+      BLOCKGEOM_D2Xp (IO,PHG4BlockGeomContainer)
+      D2U (PHCompositeNode)/
+         G4GEOPARAM_D2U (IO,PdbParameterMapContainer)
+      BLOCKGEOM_D2U (IO,PHG4BlockGeomContainer)
+      D3pVp (PHCompositeNode)/
+         G4GEOPARAM_D3pVp (IO,PdbParameterMapContainer)
+      BLOCKGEOM_D3pVp (IO,PHG4BlockGeomContainer)
+      D3pXp (PHCompositeNode)/
+         G4GEOPARAM_D3pXp (IO,PdbParameterMapContainer)
+      BLOCKGEOM_D3pXp (IO,PHG4BlockGeomContainer)
+      D3pUp (PHCompositeNode)/
+         G4GEOPARAM_D3pUp (IO,PdbParameterMapContainer)
+      BLOCKGEOM_D3pUp (IO,PHG4BlockGeomContainer)
+      D3mVp (PHCompositeNode)/
+         G4GEOPARAM_D3mVp (IO,PdbParameterMapContainer)
+      BLOCKGEOM_D3mVp (IO,PHG4BlockGeomContainer)
+      D3mXp (PHCompositeNode)/
+         G4GEOPARAM_D3mXp (IO,PdbParameterMapContainer)
+      BLOCKGEOM_D3mXp (IO,PHG4BlockGeomContainer)
+      D3mUp (PHCompositeNode)/
+         G4GEOPARAM_D3mUp (IO,PdbParameterMapContainer)
+      BLOCKGEOM_D3mUp (IO,PHG4BlockGeomContainer)
+      H1B (PHCompositeNode)/
+         G4GEOPARAM_H1B (IO,PdbParameterMapContainer)
+      BLOCKGEOM_H1B (IO,PHG4BlockGeomContainer)
+      H1T (PHCompositeNode)/
+         G4GEOPARAM_H1T (IO,PdbParameterMapContainer)
+      BLOCKGEOM_H1T (IO,PHG4BlockGeomContainer)
+      H1L (PHCompositeNode)/
+         G4GEOPARAM_H1L (IO,PdbParameterMapContainer)
+      BLOCKGEOM_H1L (IO,PHG4BlockGeomContainer)
+      H1R (PHCompositeNode)/
+         G4GEOPARAM_H1R (IO,PdbParameterMapContainer)
+      BLOCKGEOM_H1R (IO,PHG4BlockGeomContainer)
+      H2L (PHCompositeNode)/
+         G4GEOPARAM_H2L (IO,PdbParameterMapContainer)
+      BLOCKGEOM_H2L (IO,PHG4BlockGeomContainer)
+      H2R (PHCompositeNode)/
+         G4GEOPARAM_H2R (IO,PdbParameterMapContainer)
+      BLOCKGEOM_H2R (IO,PHG4BlockGeomContainer)
+      H2B (PHCompositeNode)/
+         G4GEOPARAM_H2B (IO,PdbParameterMapContainer)
+      BLOCKGEOM_H2B (IO,PHG4BlockGeomContainer)
+      H2T (PHCompositeNode)/
+         G4GEOPARAM_H2T (IO,PdbParameterMapContainer)
+      BLOCKGEOM_H2T (IO,PHG4BlockGeomContainer)
+      H3B (PHCompositeNode)/
+         G4GEOPARAM_H3B (IO,PdbParameterMapContainer)
+      BLOCKGEOM_H3B (IO,PHG4BlockGeomContainer)
+      H3T (PHCompositeNode)/
+         G4GEOPARAM_H3T (IO,PdbParameterMapContainer)
+      BLOCKGEOM_H3T (IO,PHG4BlockGeomContainer)
+      H4Y1L (PHCompositeNode)/
+         G4GEOPARAM_H4Y1L (IO,PdbParameterMapContainer)
+      BLOCKGEOM_H4Y1L (IO,PHG4BlockGeomContainer)
+      H4Y1R (PHCompositeNode)/
+         G4GEOPARAM_H4Y1R (IO,PdbParameterMapContainer)
+      BLOCKGEOM_H4Y1R (IO,PHG4BlockGeomContainer)
+      H4Y2L (PHCompositeNode)/
+         G4GEOPARAM_H4Y2L (IO,PdbParameterMapContainer)
+      BLOCKGEOM_H4Y2L (IO,PHG4BlockGeomContainer)
+      H4Y2R (PHCompositeNode)/
+         G4GEOPARAM_H4Y2R (IO,PdbParameterMapContainer)
+      BLOCKGEOM_H4Y2R (IO,PHG4BlockGeomContainer)
+      H4B (PHCompositeNode)/
+         G4GEOPARAM_H4B (IO,PdbParameterMapContainer)
+      BLOCKGEOM_H4B (IO,PHG4BlockGeomContainer)
+      H4T (PHCompositeNode)/
+         G4GEOPARAM_H4T (IO,PdbParameterMapContainer)
+      BLOCKGEOM_H4T (IO,PHG4BlockGeomContainer)
+      P1Y1 (PHCompositeNode)/
+         G4GEOPARAM_P1Y1 (IO,PdbParameterMapContainer)
+      BLOCKGEOM_P1Y1 (IO,PHG4BlockGeomContainer)
+      P1Y2 (PHCompositeNode)/
+         G4GEOPARAM_P1Y2 (IO,PdbParameterMapContainer)
+      BLOCKGEOM_P1Y2 (IO,PHG4BlockGeomContainer)
+      P1X1 (PHCompositeNode)/
+         G4GEOPARAM_P1X1 (IO,PdbParameterMapContainer)
+      BLOCKGEOM_P1X1 (IO,PHG4BlockGeomContainer)
+      P1X2 (PHCompositeNode)/
+         G4GEOPARAM_P1X2 (IO,PdbParameterMapContainer)
+      BLOCKGEOM_P1X2 (IO,PHG4BlockGeomContainer)
+      P2X1 (PHCompositeNode)/
+         G4GEOPARAM_P2X1 (IO,PdbParameterMapContainer)
+      BLOCKGEOM_P2X1 (IO,PHG4BlockGeomContainer)
+      P2X2 (PHCompositeNode)/
+         G4GEOPARAM_P2X2 (IO,PdbParameterMapContainer)
+      BLOCKGEOM_P2X2 (IO,PHG4BlockGeomContainer)
+      P2Y1 (PHCompositeNode)/
+         G4GEOPARAM_P2Y1 (IO,PdbParameterMapContainer)
+      BLOCKGEOM_P2Y1 (IO,PHG4BlockGeomContainer)
+      P2Y2 (PHCompositeNode)/
+         G4GEOPARAM_P2Y2 (IO,PdbParameterMapContainer)
+      BLOCKGEOM_P2Y2 (IO,PHG4BlockGeomContainer)
+      DP1TL (PHCompositeNode)/
+         G4GEOPARAM_DP1TL (IO,PdbParameterMapContainer)
+      BLOCKGEOM_DP1TL (IO,PHG4BlockGeomContainer)
+      DP1TR (PHCompositeNode)/
+         G4GEOPARAM_DP1TR (IO,PdbParameterMapContainer)
+      BLOCKGEOM_DP1TR (IO,PHG4BlockGeomContainer)
+      DP1BL (PHCompositeNode)/
+         G4GEOPARAM_DP1BL (IO,PdbParameterMapContainer)
+      BLOCKGEOM_DP1BL (IO,PHG4BlockGeomContainer)
+      DP1BR (PHCompositeNode)/
+         G4GEOPARAM_DP1BR (IO,PdbParameterMapContainer)
+      BLOCKGEOM_DP1BR (IO,PHG4BlockGeomContainer)
+      DP2TL (PHCompositeNode)/
+         G4GEOPARAM_DP2TL (IO,PdbParameterMapContainer)
+      BLOCKGEOM_DP2TL (IO,PHG4BlockGeomContainer)
+      DP2TR (PHCompositeNode)/
+         G4GEOPARAM_DP2TR (IO,PdbParameterMapContainer)
+      BLOCKGEOM_DP2TR (IO,PHG4BlockGeomContainer)
+      DP2BL (PHCompositeNode)/
+         G4GEOPARAM_DP2BL (IO,PdbParameterMapContainer)
+      BLOCKGEOM_DP2BL (IO,PHG4BlockGeomContainer)
+      DP2BR (PHCompositeNode)/
+         G4GEOPARAM_DP2BR (IO,PdbParameterMapContainer)
+      BLOCKGEOM_DP2BR (IO,PHG4BlockGeomContainer)
+      GEOMETRY_IO (IO,PHGeomIOTGeo)
+   PAR (PHCompositeNode)/
+      FIELD_MAP (PHDataNode)
+      G4GEO_Shielding1_0 (PHDataNode)
+      G4GEO_Shielding2_0 (PHDataNode)
+      G4GEO_Shielding3_0 (PHDataNode)
+      G4GEO_fmag_0 (PHDataNode)
+      G4GEO_kmag_0 (PHDataNode)
+      MUID_absorber (PHCompositeNode)/
+         G4GEO_MUID_absorber (PHDataNode)
+      Collimator (PHCompositeNode)/
+         G4GEO_Collimator (PHDataNode)
+      Coil (PHCompositeNode)/
+         G4GEO_Coil (PHDataNode)
+      Target (PHCompositeNode)/
+         G4GEO_Target (PHDataNode)
+      D0U (PHCompositeNode)/
+         G4GEO_D0U (PHDataNode)
+      D0X (PHCompositeNode)/
+         G4GEO_D0X (PHDataNode)
+      D0V (PHCompositeNode)/
+         G4GEO_D0V (PHDataNode)
+      D2V (PHCompositeNode)/
+         G4GEO_D2V (PHDataNode)
+      D2Xp (PHCompositeNode)/
+         G4GEO_D2Xp (PHDataNode)
+      D2U (PHCompositeNode)/
+         G4GEO_D2U (PHDataNode)
+      D3pVp (PHCompositeNode)/
+         G4GEO_D3pVp (PHDataNode)
+      D3pXp (PHCompositeNode)/
+         G4GEO_D3pXp (PHDataNode)
+      D3pUp (PHCompositeNode)/
+         G4GEO_D3pUp (PHDataNode)
+      D3mVp (PHCompositeNode)/
+         G4GEO_D3mVp (PHDataNode)
+      D3mXp (PHCompositeNode)/
+         G4GEO_D3mXp (PHDataNode)
+      D3mUp (PHCompositeNode)/
+         G4GEO_D3mUp (PHDataNode)
+      H1B (PHCompositeNode)/
+         G4GEO_H1B (PHDataNode)
+      H1T (PHCompositeNode)/
+         G4GEO_H1T (PHDataNode)
+      H1L (PHCompositeNode)/
+         G4GEO_H1L (PHDataNode)
+      H1R (PHCompositeNode)/
+         G4GEO_H1R (PHDataNode)
+      H2L (PHCompositeNode)/
+         G4GEO_H2L (PHDataNode)
+      H2R (PHCompositeNode)/
+         G4GEO_H2R (PHDataNode)
+      H2B (PHCompositeNode)/
+         G4GEO_H2B (PHDataNode)
+      H2T (PHCompositeNode)/
+         G4GEO_H2T (PHDataNode)
+      H3B (PHCompositeNode)/
+         G4GEO_H3B (PHDataNode)
+      H3T (PHCompositeNode)/
+         G4GEO_H3T (PHDataNode)
+      H4Y1L (PHCompositeNode)/
+         G4GEO_H4Y1L (PHDataNode)
+      H4Y1R (PHCompositeNode)/
+         G4GEO_H4Y1R (PHDataNode)
+      H4Y2L (PHCompositeNode)/
+         G4GEO_H4Y2L (PHDataNode)
+      H4Y2R (PHCompositeNode)/
+         G4GEO_H4Y2R (PHDataNode)
+      H4B (PHCompositeNode)/
+         G4GEO_H4B (PHDataNode)
+      H4T (PHCompositeNode)/
+         G4GEO_H4T (PHDataNode)
+      P1Y1 (PHCompositeNode)/
+         G4GEO_P1Y1 (PHDataNode)
+      P1Y2 (PHCompositeNode)/
+         G4GEO_P1Y2 (PHDataNode)
+      P1X1 (PHCompositeNode)/
+         G4GEO_P1X1 (PHDataNode)
+      P1X2 (PHCompositeNode)/
+         G4GEO_P1X2 (PHDataNode)
+      P2X1 (PHCompositeNode)/
+         G4GEO_P2X1 (PHDataNode)
+      P2X2 (PHCompositeNode)/
+         G4GEO_P2X2 (PHDataNode)
+      P2Y1 (PHCompositeNode)/
+         G4GEO_P2Y1 (PHDataNode)
+      P2Y2 (PHCompositeNode)/
+         G4GEO_P2Y2 (PHDataNode)
+      DP1TL (PHCompositeNode)/
+         G4GEO_DP1TL (PHDataNode)
+      DP1TR (PHCompositeNode)/
+         G4GEO_DP1TR (PHDataNode)
+      DP1BL (PHCompositeNode)/
+         G4GEO_DP1BL (PHDataNode)
+      DP1BR (PHCompositeNode)/
+         G4GEO_DP1BR (PHDataNode)
+      DP2TL (PHCompositeNode)/
+         G4GEO_DP2TL (PHDataNode)
+      DP2TR (PHCompositeNode)/
+         G4GEO_DP2TR (PHDataNode)
+      DP2BL (PHCompositeNode)/
+         G4GEO_DP2BL (PHDataNode)
+      DP2BR (PHCompositeNode)/
+         G4GEO_DP2BR (PHDataNode)
+      G4GDML_CONFIG (PHDataNode)
+      GEOMETRY (PHDataNode)
+
+
+ SRecEvent: { 2147483647, 2147483647, 0 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 1 }  NTracks: 2
+ SRecEvent: { 2147483647, 2147483647, 2 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 3 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 4 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 5 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 6 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 7 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 8 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 9 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 10 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 11 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 12 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 13 }  NTracks: 2
+ SRecEvent: { 2147483647, 2147483647, 14 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 15 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 16 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 17 }  NTracks: 2
+ SRecEvent: { 2147483647, 2147483647, 18 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 19 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 20 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 21 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 22 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 23 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 24 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 25 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 26 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 27 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 28 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 29 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 30 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 31 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 32 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 33 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 34 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 35 }  NTracks: 2
+ SRecEvent: { 2147483647, 2147483647, 36 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 37 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 38 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 39 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 40 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 41 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 42 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 43 }  NTracks: 2
+ SRecEvent: { 2147483647, 2147483647, 44 }  NTracks: 2
+ SRecEvent: { 2147483647, 2147483647, 45 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 46 }  NTracks: 2
+ SRecEvent: { 2147483647, 2147483647, 47 }  NTracks: 1
+ SRecEvent: { 2147483647, 2147483647, 48 }  NTracks: 0
+ SRecEvent: { 2147483647, 2147483647, 49 }  NTracks: 1
+-------------------------- Stats for DPDigitizer_TOP ---------------------------
+accumulated time (ms):	34.6808
+per event time: (ms)	 0.693617
+-------------------------------------- ** --------------------------------------
+----------------------- Stats for DPTriggerAnalyzer_TOP ------------------------
+accumulated time (ms):	3.86498
+per event time: (ms)	 0.0772996
+-------------------------------------- ** --------------------------------------
+--------------------------- Stats for EvtFilter_TOP ----------------------------
+accumulated time (ms):	0.540744
+per event time: (ms)	 0.0108149
+-------------------------------------- ** --------------------------------------
+------------------------------ Stats for MUP_TOP -------------------------------
+accumulated time (ms):	1.79897
+per event time: (ms)	 0.0179897
+-------------------------------------- ** --------------------------------------
+---------------------------- Stats for PHG4RECO_TOP ----------------------------
+accumulated time (ms):	22869.9
+per event time: (ms)	 457.398
+-------------------------------------- ** --------------------------------------
+----------------------------- Stats for SQReco_TOP -----------------------------
+accumulated time (ms):	1737.57
+per event time: (ms)	 34.7515
+-------------------------------------- ** --------------------------------------
+---------------------------- Stats for TrkEval_TOP -----------------------------
+accumulated time (ms):	159.664
+per event time: (ms)	 3.19329
+-------------------------------------- ** --------------------------------------
+--------------------------- Stats for VertexFit_TOP ----------------------------
+accumulated time (ms):	748.047
+per event time: (ms)	 14.9609
+-------------------------------------- ** --------------------------------------
+All done
+gridrun.sh finished!
